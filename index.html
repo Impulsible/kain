@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kain Energy Limited - Nigeria’s leading provider of sustainable energy and petroleum product solutions.">
+    <title>Kain Energy Limited</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+    /* General Styles */
+   /* General Styles */
+   html, body {
+        height: 100%; /* Ensure full screen coverage */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+        background: linear-gradient(to bottom right, #e6f0ff, #d1f0d1, #ffe0e0);
+    }
+
+    /* Header */
+    header {
+        background: #14078f;
+        color: #fff;
+        padding: 0.5rem 0; /* Reduced header size */
+        text-align: left;
+        z-index: 10; /* Ensure header stays on top of hero section */
+        position: relative;
+    }
+
+    .header-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    .logo img {
+        max-width: 130px; /* Adjusted logo size */
+        height: auto;
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    nav ul li a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    nav ul li a.active, nav ul li a:hover {
+        color: #FFD700;
+        text-decoration: underline;
+    }
+
+    /* Hero Section */
+    .hero {
+        background-image: url('https://source.unsplash.com/1600x900/?energy'); /* Hero background image */
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        color: #fff;
+        height: 90vh; /* Increased the image height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-direction: column;
+        padding: 20px;
+        position: relative;
+        overflow: hidden; /* Prevents any content overflow */
+    }
+
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.4); /* Dark overlay to improve text readability */
+        z-index: -1; /* Places the overlay behind the content */
+    }
+
+    .hero-content {
+        z-index: 1; /* Ensure content is above the overlay */
+    }
+
+    .hero h1 {
+        font-size: 3.5em;
+        margin-bottom: 0.5em;
+        animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+    }
+
+    .hero p {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        animation: fadeIn 3s ease-in-out; /* Fade-in animation */
+    }
+
+    .btn {
+        background: #FFD700;
+        color: #14078f;
+        padding: 12px 30px;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background 0.3s;
+        font-size: 1.2em;
+    }
+
+    .btn:hover {
+        background: #14078f;
+        color: #FFD700;
+    }
+
+    /* Sections */
+    section {
+        padding: 2rem;
+        background: #fff;
+        margin: 20px 0;
+        border-radius: 10px;
+    }
+
+    /* Footer */
+    footer {
+        background: #14078f;
+        color: white;
+        text-align: center;
+        padding: 1rem 0;
+        margin-top: 20px;
+    }
+
+    /* Contact Form */
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-family: inherit;
+        font-size: 16px;
+    }
+
+    .contact-form button {
+        background-color: #14078f;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+
+    .contact-form button:hover {
+        background-color: #FFD700;
+        color: #14078f;
+    }
+
+    .testimonial {
+        background: #f9f9f9;
+        padding: 2rem;
+        border-left: 5px solid #14078f;
+        margin: 1rem 0;
+    }
+
+    .whatsapp-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-size: 24px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+
+    /* Keyframes */
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    /* General Styles */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #e6f0ff, #d1f0d1, #ffe0e0);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?energy'); /* Hero background image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to improve text readability */
+    z-index: -1;
+}
+
+.hero-content {
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.btn {
+    background: #FFD700;
+    color: #14078f;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 1.2em;
+}
+
+.btn:hover {
+    background: #14078f;
+    color: #FFD700;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="download-1.jpg.png" alt="Kain Energy Limited Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#company">Our Company</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#subsidiaries">Subsidiaries</a></li>
+                    <li><a href="#careers">Career</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-image">
+            <img src="Casebeeld_1000x540px_oil-and-gas-case-1.jpg" alt="Hero Image">
+        </div>
+        <div class="hero-content">
+            <h1>Powering the Future with Sustainable Energy Solutions</h1>
+            <p>At Kain Energy Limited, we are committed to delivering top-tier petroleum products while driving innovation and sustainability in the energy sector.</p>
+            <a href="#contact" class="btn">Get in Touch</a>
+        </div>
+    </section>
+    
+
+    <section id="about" class="section">
+        <div class="container content">
+            <h2>About Us</h2>
+            <p>Kain Energy Limited is a leading energy company dedicated to delivering innovative and sustainable energy solutions. Our team of experts ensures excellence in every project.</p>
+            
+            <h3>Executive Directors</h3>
+            <div class="team">
+                <div class="team-member">
+                    <img src="ceo.jpeg" alt="CEO of Kain Energy">
+                    <h4>Zanna Zakaria Idris</h4>
+                    <p>The Managing Director and CEO of Kain Energy Ltd</p>
+                </div>
+            </div>
+
+            <h3>Our Team</h3>
+            <p>Our diverse team comprises industry professionals with deep expertise in the energy sector, including engineers, analysts, project managers, and sustainability experts.</p>
+            <ul>
+                <li><strong>Engineering Team:</strong> Leading innovation in energy solutions.</li>
+                <li><strong>Operations Team:</strong> Ensuring seamless project execution.</li>
+                <li><strong>Finance Team:</strong> Managing investments and financial strategies.</li>
+                <li><strong>Human Resources:</strong> Supporting a high-performance workforce.</li>
+                <li><strong>Customer Relations:</strong> Ensuring client satisfaction and service excellence.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="company" class="section">
+        <div class="container content">
+            <h2>Our Company</h2>
+            <p>Kain Energy Limited is an indigenous Nigerian company with interest in the downstream sector of the petroleum industry. With a client base spread across Nigeria, we trade in refined petroleum products such as PMS, AGO, and DPK.</p>
+    
+            <h3>Milestone</h3>
+            <img src="miles.jpeg" alt="Milestone Achievement" style="width:100%; max-width:600px; display:block; margin:10px auto;">
+            <p>Since our inception, Kain Energy Limited has achieved significant milestones in the energy sector, expanding our operations and establishing a strong presence in the market. From securing strategic partnerships to enhancing our supply chain efficiency, we continue to set new industry standards.</p>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <div class="container content">
+            <h2>Services</h2>
+            <p>We specialize in the marketing and distribution of petroleum products, ensuring quality management throughout the supply chain.</p>
+        </div>
+    </section>
+
+    <section id="subsidiaries" class="section">
+        <div class="container content">
+            <h2>Our Subsidiaries</h2>
+            <div class="subsidiary">
+                <h3>Kain Logistics</h3>
+                <p>Providing efficient transportation and supply chain solutions for petroleum products.</p>
+            </div>
+            <div class="subsidiary">
+                <h3>Kain Renewables</h3>
+                <p>Focused on sustainable energy solutions, including solar and biofuel projects.</p>
+            </div>
+            <div class="subsidiary">
+                <h3>Kain Consulting</h3>
+                <p>Offering industry insights, market research, and regulatory compliance services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="careers" class="section">
+        <div class="container content">
+            <h2>Career</h2>
+            <p>Join our team and be part of a dynamic workforce dedicated to excellence in the energy sector.</p>
+        </div>
+    </section>
+
+    <section id="partnerships" class="section">
+        <div class="container content">
+            <h2>Partner With Us</h2>
+            <p>We are always open to collaborating with like-minded partners who share our vision for a sustainable energy future.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container content">
+            <h2>Contact Us</h2>
+            <p>If you have any questions or inquiries, feel free to reach out. We're here to help!</p>
+            <div class="contact-form">
+                <form action="#">
+                    <input type="text" placeholder="Your Name" required>
+                    <input type="email" placeholder="Your Email" required>
+                    <textarea placeholder="Your Message" rows="4" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Kain Energy Limited | All Rights Reserved</p>
+    </footer>
+
+    <!-- WhatsApp Icon for Contact -->
+    <div class="whatsapp-icon">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</body>
+</html>
