@@ -1,0 +1,185 @@
+/* General Styles */
+html, body {
+    height: 100%; /* Ensure full screen coverage */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom right, #e6f0ff, #d1f0d1, #ffe0e0);
+}
+
+/* Header */
+header {
+    background: #14078f;
+    color: #fff;
+    padding: 0.5rem 0; /* Reduced header size */
+    text-align: left;
+    z-index: 10; /* Ensure header stays on top of hero section */
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo img {
+    max-width: 130px; /* Adjusted logo size */
+    height: auto;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a.active, nav ul li a:hover {
+    color: #FFD700;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?energy'); /* Hero background image */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: #fff;
+    height: 90vh; /* Increased the image height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding: 20px;
+    position: relative;
+    overflow: hidden; /* Prevents any content overflow */
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay to improve text readability */
+    z-index: -1; /* Places the overlay behind the content */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.5em;
+    animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 1em;
+    animation: fadeIn 3s ease-in-out; /* Fade-in animation */
+}
+
+.btn {
+    background: #FFD700;
+    color: #14078f;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    font-size: 1.2em;
+}
+
+.btn:hover {
+    background: #14078f;
+    color: #FFD700;
+}
+
+/* Sections */
+section {
+    padding: 2rem;
+    background: #fff;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background: #14078f;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.contact-form button {
+    background-color: #14078f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #FFD700;
+    color: #14078f;
+}
+
+.testimonial {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-left: 5px solid #14078f;
+    margin: 1rem 0;
+}
+
+.whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 50%;
+    font-size: 24px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+/* Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
